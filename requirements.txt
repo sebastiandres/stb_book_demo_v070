@@ -1,2 +1,3 @@
 streamlit
+matplotlib
 git+https://github.com/sebastiandres/streamlit_book.git
