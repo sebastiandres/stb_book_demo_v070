@@ -11,5 +11,7 @@ Version 0.0.1
 * Initial documentation version - done in streamlit books
 * Creating lots of files for debugging. 
 
-![Streamlit Book](https://raw.githubusercontent.com/sebastiandres/streamlit_book/main/examples/Demo%20Day/folder_structure.png)
+Notice that all the files you see are plain files with this structure:
+
+![Streamlit Book](https://raw.githubusercontent.com/sebastiandres/streamlit_book_examples/main/DemoDay/folder_structure.png)
 

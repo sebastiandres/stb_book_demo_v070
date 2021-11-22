@@ -1,4 +1,4 @@
-# About the Streamlit Book
+# About the library
 
 ## Where can I find it?
 The repository is online at https://github.com/sebastiandres/streamlit_book
