@@ -1,3 +1,4 @@
-#text-input
+stb.text-input
 Please explain why you like streamlit.
-explanation: Thanks for the answer.
+success: Thanks for the answer.
+contains: easy
