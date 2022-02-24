@@ -3,6 +3,8 @@ import streamlit_book as stb
 import time
 import random
 
+st.title("True or False Question")
+
 # Default
 st.header("Question with minimal arguments")
 c1, c2 = st.columns([5,5])
