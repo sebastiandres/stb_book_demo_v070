@@ -4,7 +4,7 @@ from pathlib import Path
 
 def main():
        # Streamlit webpage properties
-       st.set_page_config(layout="wide", page_icon="📚", page_title="Activities Demo 0.7.0")
+       st.set_page_config(layout="wide", page_icon="📚", page_title="Book Demo 0.7.0")
 
        # Streamit book properties
        save_answers = True
