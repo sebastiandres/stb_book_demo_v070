@@ -7,56 +7,102 @@ st.title("Multiple Choice Question")
 
 # Default
 st.header("Question with minimal arguments")
-c1, c2 = st.columns([5,5])
+c1, c2 = st.columns([5,4])
 with c1:
     st.code("""
-    stb.multiple_choice(
-                        "What are 1 ...", # required argument
-                        {"a":True, "b":False, "c":False} # required argument
-                        )
+stb.multiple_choice("I typically ask recruiters to point out which of these are pokemon",
+                    {"ditto":True,
+                     "jupyter":False,
+                     "pyspark":False,
+                     "scikit":False,
+                     "metapod":True,
+                     "vulpix":True}
+                   )
     """)
 with c2:
-    stb.multiple_choice(
-                        "What are 1...", # required argument
-                        {"a":True, "b":False, "c":False} # required argument
-                        )
-# Default
+    stb.multiple_choice("I typically ask recruiters to point out which of these area pokemon",
+                        {"ditto":True,
+                         "jupyter":False,
+                         "pyspark":False,
+                         "scikit":False,
+                         "metapod":True,
+                         "vulpix":True}
+                       )
+                       
+# Custom
 st.header("Question with all optional arguments")
 c1, c2 = st.columns([5,4])
 with c1:
     st.code("""
-        stb.true_or_false("Are you a cyborg?", False, 
-                            success='Pfiuuuuu!!!', 
-                            error='RoBoTs NoT WeLcOmE to tHiS aPp', 
-                            button='Check MY answer')
+stb.multiple_choice("I typically ask recruiters to point out which of these are pokemons",
+                    {"ditto":True,
+                     "jupyter":False,
+                     "pyspark":False,
+                     "scikit":False,
+                     "metapod":True,
+                     "vulpix":True},
+                    success='Indeed!', 
+                    error="Gotta catch them all!", 
+                    button='Check MY answer'
+                   )
         """)
 with c2:
-    stb.multiple_choice(
-                        "What are 2...", # required argument
-                        {"a":True, "B":False, "c":False}, # required argument
-                        success='Pfiuuuuu!!!', 
-                        error='RoBoTs NoT WeLcOmE to tHiS aPp', 
-                        button='Check MY answer')
+    stb.multiple_choice("I typically ask recruiters to point out which of these are pokemons",
+                        {"ditto":True,
+                         "jupyter":False,
+                         "pyspark":False,
+                         "scikit":False,
+                         "metapod":True,
+                         "vulpix":True},
+                        success='Indeed!', 
+                        error="Gotta catch them all!", 
+                        button='Check MY answer'
+                       )
 
 # Custom question
 st.header("Question with custom behavior")
-c1, c2 = st.columns([4,3])
+c1, c2 = st.columns([5,4])
 with c1:
     st.code("""
-adsad
-        """)
+checked_answer, correct_answer = stb.multiple_choice(
+                    "I typically ask recruiters to say which of these are pokemon",
+                    {"ditto":True,
+                        "jupyter":False,
+                        "pyspark":False,
+                        "scikit":False,
+                        "metapod":True,
+                        "vulpix":True},
+                    success='', 
+                    error="", 
+                    button='Check'
+                    )
+if checked_answer:
+    if correct_answer:
+        st.info("Bravo!!!")         
+        st.balloons()
+    else:
+        st.warning("Gotta pump those numbers, roockie!!!")            
+else:
+    st.write("You need to check the answer")
+    """)
 with c2:
-    checked_answer, correct_answer = stb.multiple_choice("What are 3...", # required argument
-                                                        {"A":True, "B":False, "C":False}, # required argument
-                                                        success="",
-                                                        error="",
-                                                        button='Check THE answer')
+    checked_answer, correct_answer = stb.multiple_choice(
+                        "I typically ask recruiters to say which of these are pokemon",
+                        {"ditto":True,
+                         "jupyter":False,
+                         "pyspark":False,
+                         "scikit":False,
+                         "metapod":True,
+                         "vulpix":True},
+                        success='', 
+                        error="", 
+                        button='Check'
+                       )
     if checked_answer:
         if correct_answer:
-            st.info("Welcome fellow human!")            
+            st.info("Bravo!!!")         
             st.balloons()
         else:
-            st.info("Welcome fellow human!")            
-            st.balloons()
+            st.warning("Gotta pump those numbers, roockie!!!")            
     else:
         st.write("You need to check the answer")
